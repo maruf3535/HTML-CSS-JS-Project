@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+
+    <!-- css connect -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- js connect -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="hour"></div>
+        <div id="min"></div>
+        <div id="sec"></div>
+    </div>
+
+    <div id="time-box">
+        <div id="hour-time-box">
+            <p id="hour-time" class="pra-time-box">Hour</p>
+            <input type="number" id="inputbox1" class="input-time-box">
+        </div>
+        <div id="minitute-time-box">
+            <p id="minitute-time" class="pra-time-box">Minitute</p>
+            <input type="number" id="inputbox2" class="input-time-box">
+        </div>
+        <button id="btn" onclick="click1()">Confirm</button>
+    </div>
+
+
+    <script>
+
+        var pra1 = document.getElementById("hour-time")
+        var inputBox1 = document.getElementById("inputbox1")
+        var pra2 = document.getElementById("minitute-time")
+        var inputBox2 = document.getElementById("inputbox2")
+        var on = true;
+
+        function click1() {
+            pra1.innerHTML = inputBox1.value;
+            pra2.innerHTML = inputBox2.value;
+            on = false;
+        }
+        function main(){
+            var hourTime = inputBox1.value;
+            var minituteTime = inputBox2.value;
+            present = new Date();
+            if(on == true){
+                var setHour = (present.getHours() - present.getHours()) + present.getHours();
+                var setMin = (present.getMinutes() - present.getMinutes())+ present.getMinutes();
+            }
+            else if(on == false){
+                var setHour = (present.getHours() - present.getHours()) + hourTime;
+                var setMin = (present.getMinutes() - present.getMinutes())+ minituteTime;
+            }
+            
+            var setSec = present.getSeconds();
+            hTime = setHour;
+            minTime = setMin;
+            secTime = setSec;
+            hRotation = (30 * hTime) + (minTime/2);
+            minRotation = (6 * minTime) + (0.1 * secTime);
+            secRotation = (6 * secTime);
+            
+            // Next 3 lines for selecting HTML element using ID. But we can use directly ID name without select them.
+            // var hour = document.getElementById("hour");
+            // var min = document.getElementById("min");
+            // var sec = document.getElementById("sec");
+
+            hour.style.transform = `rotate(${hRotation}deg)`;
+            min.style.transform = `rotate(${minRotation}deg)`;
+            sec.style.transform = `rotate(${secRotation}deg)`;
+        }
+        setInterval(main, 1000);
+       
+    </script>
+</body>
+
+</html>
