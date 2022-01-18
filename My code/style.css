@@ -1,0 +1,96 @@
+:root{
+    --bg-color: rgb(39, 34, 34);
+}
+
+.container{
+    background: url('download.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 40vw; /* use 'vw' unit instead of using 'vh' unit. It's a problem for me because I don't the reason of using this unit. */
+    width: 40vw;
+    margin: auto;
+    position: relative;
+}
+
+
+#hour{
+    background: var(--bg-color);
+    height: 24%;
+    width: 1.8%;
+    position: absolute;
+    left: 49%;
+    top: 27%;
+    transform-origin: bottom;
+    border-radius: 5px;
+}
+#min{
+    background: var(--bg-color);
+    height: 31%;
+    width: 1.5%;
+    position: absolute;
+    left: 49%;
+    top: 20%;
+    transform-origin: bottom;
+    border-radius: 5px;
+}
+#sec{
+    background: var(--bg-color);
+    height: 38%;
+    width: 1%;
+    position: absolute;
+    left: 49.3%;
+    top: 13%;
+    transform-origin: bottom;
+    border-radius: 5px;
+}
+#time-box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+#hour-time-box{
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(65, 189, 211);
+    border-radius: 14px;
+    margin: 0px 5px;
+}
+#minitute-time-box{
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(65, 189, 211);
+    border-radius: 14px;
+    margin: 0px 5px;
+}
+.input-time-box{
+    height: 18px;
+    width: 70px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.pra-time-box{
+    height: 20px;
+    width: 60px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+#btn{
+    border: 1px solid grey;
+    border-radius: 13px 5px;
+    padding: 8px;
+    background-color: rgb(94, 146, 94);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+*{
+    /* border: 1px solid red; */
+}
