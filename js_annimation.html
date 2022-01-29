@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Annimation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        #container{
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center;
+            padding: 20px;
+            margin: 20px;
+        }
+        #container h1{
+            font-size: 26px;
+            text-align: center;
+            border: 1px solid navajowhite;
+            border-radius: 3px;
+            width: 500px;
+            height: 60px;
+            padding: 20px 10px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+        #container p{
+            font-size: 20px;
+            margin: 10px;
+            padding: 10px 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <h1></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui molestiae inventore excepturi id? Saepe quisquam amet, magni non ullam odit porro vitae ad cupiditate ipsum a nulla. Quibusdam quidem deserunt ex debitis, sed soluta voluptas delectus officiis tempore ipsum exercitationem iusto rem omnis aliquid amet odit, aut corrupti, rerum inventore doloribus magnam cum. Officia id magnam quam et maxime veniam commodi aperiam ducimus quae facilis eius voluptatem architecto, at natus excepturi culpa sed aliquam dignissimos illo ipsam recusandae expedita officiis. Repellendus sequi illum temporibus, inventore quidem nulla! Fuga earum iure architecto dolorem rerum eos officiis minima tempora libero dolores cum veritatis delectus labore maxime, quia quaerat aliquid odio laudantium ullam a magni nam error. Iusto consequatur placeat sint quidem mollitia optio labore aut recusandae sit eligendi non unde repellendus dolore delectus explicabo tempore, obcaecati amet quaerat deleniti nulla ut autem dicta sunt sequi? Ab dolor quos sed suscipit cum pariatur nihil omnis perferendis velit totam repudiandae assumenda hic autem nulla quod, consequatur laborum, quis eos dolorum voluptates minus quam ratione? Voluptatum corporis accusamus mollitia debitis est error. Itaque perspiciatis quaerat voluptatem reiciendis harum laudantium, numquam hic voluptatum corporis illum fuga neque eaque laboriosam ab quia explicabo ea consectetur temporibus maiores.</p>
+    </div>
+
+    <script>
+        var h1Select = document.querySelector("h1");
+        var h1Content = "Maruf is a programmer..."
+        var i = 0;
+        function annimation1 (){
+            if (i > (h1Content.length - 1)){
+                return;
+            }
+            h1Select.innerHTML += h1Content.charAt(i);
+            i++;
+        }
+        setInterval('annimation1()', 130)
+        
+
+        var annimation1Time = (130 * (h1Content.length))
+        var j = (h1Content.length);
+        function annimation1_close() {
+            if (j > (j + 1)){
+                return;
+            }
+            else if (j < 0){
+                return;
+            }
+            h1Content = h1Content.substring(0, j);
+            h1Select.innerHTML = h1Content;
+            j--;
+        }
+        function annimation1_close_call(){
+            setInterval('annimation1_close()', 130)
+        }
+        setTimeout('annimation1_close_call()', ((annimation1Time) + 10))
+
+        
+
+
+        var h1Content2 = "Rafsan will be a front-end developer..."
+        var annimation2StartTime = (annimation1Time * 2)
+        var k = 0
+        function  annimation2(){
+            if (k > (h1Content2.length - 1)){
+                return;
+            }
+            h1Select.innerHTML += h1Content2.charAt(k);
+            k++;
+        }
+        function annimation2_call(){
+            setInterval('annimation2()', 130)
+        }
+        setTimeout('annimation2_call()', ((annimation2StartTime) + 10))
+
+        
+        var annimation2CloseTime = (annimation2StartTime + (130 * (h1Content2.length)))
+        var l = (h1Content2.length);
+        function annimation2_close() {
+            if (l > (l + 1)){
+                return;
+            }
+            else if (l < 0){
+                return;
+            }
+            h1Content2 = h1Content2.substring(0, l);
+            h1Select.innerHTML = h1Content2;
+            l--;
+        }
+        function annimation2_close_call(){
+            setInterval('annimation2_close()', 130)
+        }
+        setTimeout('annimation2_close_call()', ((annimation2CloseTime) + 10))
+
+
+
+
+        var h1Content3 = "Shihab will be a back-end developer..."
+        var annimation3StartTime = (annimation2CloseTime + (h1Content2.length * 130));
+        var m = 0
+        function annimation_reopen(){
+            if (m > (h1Content3.length - 1)){
+                return;
+            }
+            h1Select.innerHTML += h1Content3.charAt(m);
+            m++;
+        }
+        function annimation_reopen_call(){
+            setInterval('annimation_reopen()', 130)
+        }
+        setTimeout('annimation_reopen_call()', ((annimation3StartTime) + 10))
+        
+        
+
+    </script>
+
+</body>
+</html>
