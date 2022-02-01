@@ -5,7 +5,6 @@ var secondInput = document.getElementById("secondInput")
 var resultOutput = document.getElementById("resultOutput")
 var sign = document.getElementById("sign")
 var resultPra = document.getElementById("resultPra")
-// var equel = document.getElementById("equel")
 
 function selected(){
     if (calculations.value == "sum"){
