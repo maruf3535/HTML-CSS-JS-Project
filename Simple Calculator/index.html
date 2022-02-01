@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JS Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="container">
+        <h1>Simple JS Calculator</h1>
+        <div id="option-div">
+            <label for="calculation">Option:</label>
+            <select name="" id="calculation" onchange="selected()">
+                <option value="" selected>Please Select One Option</option>
+                <option value="sum">Sum</option>
+                <option value="minus">Minus</option>
+                <option value="mul">Multipication</option>
+                <option value="division">Division</option>
+            </select>
+        </div>
+        <div id="input-output-div">
+            <input type="number" name="" id="firstInput">
+            <p id="sign">+</p>
+            <input type="number" name="" id="secondInput">
+            <p id="equel">=</p>
+            <input type="number" name="" id="resultOutput" readonly>
+        </div>
+        <p id="resultPra">Please Select a option...</p>
+
+        <button id="submit" onclick="submit()">Enter</button>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

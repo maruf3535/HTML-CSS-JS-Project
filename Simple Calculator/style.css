@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*{
+    /* border: 1px solid navy; */
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(215 201 181);
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(13, 84, 150);
+    padding: 40px;
+}
+
+#container h1{
+    /* margin-bottom: 20px; */
+}
+
+#calculation{
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px
+}
+
+#option-div{
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
+#input-output-div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 10px;
+}
+
+#input-output-div p{
+    font-size: 25px;
+    font-weight: bold;
+    align-self: center;
+}
+
+#input-output-div #firstInput{
+    border: none;
+    border-radius: 25px;
+    width: 18%;
+    text-align: center;
+    margin-right: 5px;
+    /* padding: 5px; */
+    font-size: 18px;
+    padding: 10px 15px;
+}
+#input-output-div #secondInput{
+    border: none;
+    border-radius: 25px;
+    width: 18%;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* padding: 5px; */
+    font-size: 18px;
+    padding: 10px 15px;
+}
+#input-output-div #resultOutput{
+    border: none;
+    border-radius: 25px;
+    width: 30%;
+    text-align: center;
+    margin-left: 5px;
+    /* padding: 5px; */
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+#result{
+    margin-bottom: 6px;
+}
+
+#submit{
+    padding: 5px 30px;
+    border: none;
+    border-radius: 25px;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-right: 50px;
+    font-size: 16px;
+    color: white;
+    background: #52b563;
+
+}
